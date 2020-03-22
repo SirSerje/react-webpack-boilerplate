@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
-const PORT = 3042;
 
 module.exports = {
   entry: {
@@ -13,7 +12,7 @@ module.exports = {
     publicPath: '/',
   },
   devServer: {
-    port: PORT,
+    port: process.env.PORT,
     historyApiFallback: true,
     overlay: true,
     open: true,

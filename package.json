@@ -5,12 +5,18 @@
   "main": "src/index.js",
   "repository": "https://github.com/user/repository.git",
   "author": "Your Name <your@email.com>",
-  "keywords": ["webpack", "react", "sass", "js", "javascript"],
+  "keywords": [
+    "webpack",
+    "react",
+    "sass",
+    "js",
+    "javascript"
+  ],
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --config=config/webpack.dev.js --hot",
-    "start:reload": "webpack-dev-server --config=config/webpack.dev.js",
-    "start:style": "cross-env MAP_STYLE=true webpack-dev-server --config=config/webpack.dev.js --hot",
+    "start": "cross-env PORT=3041 webpack-dev-server --config=config/webpack.dev.js --hot",
+    "start:reload": "cross-env PORT=3041 webpack-dev-server --config=config/webpack.dev.js",
+    "start:style": "cross-env PORT=3041 cross-env MAP_STYLE=true webpack-dev-server --config=config/webpack.dev.js --hot",
     "build": "webpack --config=config/webpack.prod.js",
     "analyze": "cross-env ENABLE_ANALYZER=true yarn build",
     "test": "jest --config jest.config.js",

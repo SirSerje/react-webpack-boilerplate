@@ -3,13 +3,13 @@ const common = require('./webpack.common.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const mapStyle = process.env.MAP_STYLE === 'true';
-const PORT = 3042;
+
 
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    port: PORT,
+    port: process.env.PORT,
     historyApiFallback: true,
     overlay: true,
     open: true,
