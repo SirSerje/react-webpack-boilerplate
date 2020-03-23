@@ -65,3 +65,6 @@ dist/*
 
 #Webstorm config files
 .idea
+
+
+.DS_Store
