@@ -1,3 +1,4 @@
+// @flow
 // eslint-disable-next-line no-unused-vars
 import React, { Component, useState } from 'react';
 import { hot } from 'react-hot-loader/root';
@@ -6,7 +7,11 @@ import logo from '../assets/images/logo.svg';
 //import HookUsage from './HookUsage';
 
 
-class App extends Component {
+type Props = {
+
+};
+
+class App extends Component<Props> {
   render() {
     return (
       <div className="App">
