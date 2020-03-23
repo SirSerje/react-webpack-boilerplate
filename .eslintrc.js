@@ -21,6 +21,7 @@ module.exports = {
     node: true,
     commonjs: true,
     es6: true,
+    jest: true,
   },
   rules: {
     "no-console":"warn",
