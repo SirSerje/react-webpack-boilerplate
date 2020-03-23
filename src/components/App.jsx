@@ -1,5 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+import { hot } from 'react-hot-loader/root';
 import logo from '../assets/images/logo.svg';
+// For checking availability RHL, HMR with hooks features:
+//import HookUsage from './HookUsage';
 
 
 class App extends Component {
@@ -14,11 +17,13 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <p className="App-intro">
-          Includes: React 16.13+, sass, less, css (with normalizing),<br/> Jest, Enzyme, Hot Reload
+          Includes: React 16.13+, sass, less, css (with normalizing),<br/> Jest, Enzyme, Hot Module Reload,
+          React Hot Reload
         </p>
+        {/* <HookUsage/> */}
       </div>
     );
   }
 }
 
-export default App;
+export default hot(App);

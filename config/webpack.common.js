@@ -3,9 +3,10 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-  entry: {
-    main: path.resolve(__dirname, '../src', 'index.js'),
-  },
+  entry: [
+    'react-hot-loader/patch', // https://github.com/gaearon/react-hot-loader#hot-loaderreact-dom
+    path.resolve(__dirname, '../src', 'index.js'),
+  ],
   output: {
     filename: '[name].[hash].js',
     path: path.resolve(__dirname, '../dist'),

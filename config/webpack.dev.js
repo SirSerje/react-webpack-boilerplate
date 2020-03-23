@@ -15,6 +15,12 @@ module.exports = merge(common, {
     open: true,
     stats: 'errors-only',
   },
+  resolve: {
+    // https://github.com/gaearon/react-hot-loader#hot-loaderreact-dom
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    },
+  },
   module: {
     rules: [
       {
