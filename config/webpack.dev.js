@@ -24,6 +24,13 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
+        test: /\.(js|jsx)$/,
+        exclude: [/node_modules/],
+        // (!) Warning: customize your rules wisely:
+        // eslint supposed to crash if you have at least one error in code
+        use: ['babel-loader' ,'eslint-loader'],
+      },
+      {
         test: /\.css$/,
         use: [
           { loader: 'style-loader' },

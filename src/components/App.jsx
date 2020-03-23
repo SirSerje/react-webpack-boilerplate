@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { Component, useState } from 'react';
 import { hot } from 'react-hot-loader/root';
 import logo from '../assets/images/logo.svg';
