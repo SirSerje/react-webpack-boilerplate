@@ -1,0 +1,12 @@
+[ignore]
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+module.name_mapper='^Components' -> '<PROJECT_ROOT>/src/components'
+
+[strict]
