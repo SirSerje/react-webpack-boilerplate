@@ -34,6 +34,7 @@ It’s already included, but not master branch (take a look onto https://github.
 
 ## What will be added:
 * style lint
+* CI validation
 * Docker build 
 * You can add your suggestions in the [issues](https://github.com/SirSerje/react-webpack-boilerplate/issues) or [pull request](https://github.com/SirSerje/react-webpack-boilerplate/pulls) page
 
