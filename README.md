@@ -30,7 +30,12 @@ Finding a universal configuration for webpack is sometimes difficult. Tutorials 
 * All deps are fresh 🥬(24.03.2020)
 
 ## What about static typization: 
-It’s already included, but not master branch (take a look onto https://github.com/SirSerje/react-webpack-boilerplate/tree/with-flow). Flow run directly with yarn flow:status command. Unfortunately, I have not found solution to throw flow errors through|with eslint. (If you already have solution, please send it via contact or create issue here https://github.com/SirSerje/react-webpack-boilerplate/issues ). So, you can validate your flow code before runtime.
+Configuration already included. Please, take a look onto .babelrc.js, .flowconfig, .eslintrc.js. These
+files has commented functionality to work properly with flow. Also, src/components/App.jsx has example 
+flow implementation. Just uncomment functionality and satisfy :) Do not forget setup your IDE 
+to develop correctly (Webstorm : 'Settings' > 'Language and Frameworks' > 'JavaScript' > set language version to flow)
+
+Please give create issue on feature request if you need TypeScript boilerplate.
 
 ## What will be added:
 * style lint
