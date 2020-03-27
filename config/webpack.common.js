@@ -9,13 +9,21 @@ module.exports = {
   ],
   output: {
     filename: '[name].[hash].js',
+    // where your code will placed relatively project root
     path: path.resolve(__dirname, '../dist'),
+    // relates to html-webpack-plugin: where index.html will try to find you code
+    // in this repo dist/index.html will looks for js relatively to itself in ./[name][hash].js
     publicPath: '/',
   },
   devServer: {
+    // configure package.json build script port or add some env manipulation to
+    // pass through process.env you port
     port: process.env.PORT,
+    // in 'true' case browser will not change route path. Any 404 like will renders in same route
     historyApiFallback: true,
+    // simply shows full screen overlay if there are some compiler error
     overlay: true,
+    // open rendered page
     open: true,
   },
   module: {

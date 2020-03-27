@@ -1,7 +1,6 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
@@ -12,6 +11,14 @@ const enableBundleAnalyzer = process.env.ENABLE_ANALYZER === 'true';
 module.exports = merge(common, {
   mode: 'production',
   devtool: 'source-map',
+  output: {
+    filename: '[name].[hash].js',
+    // where your code will placed relatively project root
+    path: path.resolve(__dirname, '../dist'),
+    // relates to html-webpack-plugin: where index.html will try to find you code
+    // in this repo dist/index.html will looks for js relatively to itself in ./[name][hash].js
+    publicPath: './',
+  },
   module: {
     rules: [
       {
@@ -38,11 +45,6 @@ module.exports = merge(common, {
     runtimeChunk: false,
   },
   plugins: [
-    new CleanWebpackPlugin( {
-      root: process.cwd(),
-      verbose: true,
-      dry: false,
-    }),
     new OptimizeCssAssetsPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].[hash:8].css',

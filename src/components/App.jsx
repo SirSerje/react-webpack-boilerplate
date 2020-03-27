@@ -1,17 +1,16 @@
 // @flow
 // eslint-disable-next-line no-unused-vars
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import { hot } from 'react-hot-loader/root';
 import logo from '../assets/images/logo.svg';
 // For checking availability RHL, HMR with hooks features:
 //import HookUsage from './HookUsage';
 
+/*type Props = {
 
-type Props = {
+};*/
 
-};
-
-class App extends Component<Props> {
+class App extends React.Component/*<Props>*/ {
   render() {
     return (
       <div className="App">

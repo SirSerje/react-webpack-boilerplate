@@ -36,6 +36,8 @@ It’s already included, but not master branch (take a look onto https://github.
 * style lint
 * CI validation
 * Docker build 
+* chunk splitting 
+* lazy loading
 * You can add your suggestions in the [issues](https://github.com/SirSerje/react-webpack-boilerplate/issues) or [pull request](https://github.com/SirSerje/react-webpack-boilerplate/pulls) page
 
 
@@ -56,6 +58,11 @@ First at all take a look at troubleshooting section https://github.com/nodejs/no
 > Can I use this template for docker build?
 
 You can try to put this build in docker, but this option is not tested for this time.
+
+> My dist folder doesn't refresh after each build
+
+CleanWebpackPlugin was removed to minimize package. Potentially you can receive this bug if your shell
+do not support `rm -rf` command (windows).
 
 
 Do not hasitate! Add issues, PR's, feature requests in the [issues](https://github.com/SirSerje/react-webpack-boilerplate/issues) or [pull request](https://github.com/SirSerje/react-webpack-boilerplate/pulls) page

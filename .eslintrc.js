@@ -36,6 +36,7 @@ module.exports = {
                            // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
                            // default to latest and warns if missing
                            // It will default to "detect" in the future
+      // (!) uncomment line down below to run flow correctly
       //'flowVersion': '0.53', // Flow version
     },
     propWrapperFunctions: [
