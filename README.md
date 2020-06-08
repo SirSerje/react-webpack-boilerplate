@@ -2,6 +2,8 @@
 
 Exhaustive template for react webpack inspired with [FerJSsilva/webpack-4-react-boilerplate](https://github.com/FerJSsilva/webpack-4-react-boilerplate)
 
+CircleCI: [![CircleCI](https://circleci.com/gh/SirSerje/react-webpack-boilerplate.svg?style=svg)](https://circleci.com/gh/SirSerje/react-webpack-boilerplate) Checks if npm can execute `install`, `test` & `build` commands properly.
+
 
 ## Motivation
 Finding a universal configuration for webpack is sometimes difficult. Tutorials are limited by few extensions, like CSS or prettier / etc. This repo called to close all needs with React Boilerplate. This boilerplate doesn’t solve too complex cases (tricky compilation / typescript support / extra optimisations), but in future I will try to improve this. If you looking for template for common react app - this template is you choice.
@@ -39,7 +41,7 @@ Please give create issue on feature request if you need TypeScript boilerplate.
 
 ## What will be added:
 * style lint
-* CI validation
+* CI validation ✅
 * Docker build 
 * chunk splitting 
 * lazy loading
